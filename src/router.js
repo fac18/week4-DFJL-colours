@@ -2,8 +2,11 @@ const handlers = require("./handlers.js");
 
 const router = (request, response) => {
   const url = request.url;
+  console.log(url)
+  console.log('elseif:', url.includes("public"))
   if (url === "/") {
     handlers.handlerHome(request, response);
+
   } else if (url.indexOf("public") !== -1) {
     handlers.handlerPublic(request, response, url);
   } else {

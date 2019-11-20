@@ -3,6 +3,7 @@ const path = require("path");
 
 const handlerHome = (request, response) => {
   const url = request.url;
+  console.log('handlerhome url:', url)
   if (url === "/") {
     const filePath = path.join(__dirname, "..", "public", "index.html");
 
@@ -27,6 +28,7 @@ const handlerPublic = (request, response, url) => {
     js: "application/js"
   };
 
+  console.log('handlerpublic url:', url)
   const filePath = path.join(__dirname, "..", url);
   fs.readFile(filePath, (error, file) => {
     if (error) {
