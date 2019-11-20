@@ -1,0 +1,33 @@
+{
+  "name": "week4-dfjl-colours",
+  "version": "1.0.0",
+  "description": "css colour autocompleter",
+  "main": "public/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tape tests/test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plasticneuron/week4-DFJL-colours.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "server",
+    "backend"
+  ],
+  "author": "FAC18-DFJL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plasticneuron/week4-DFJL-colours/issues"
+  },
+  "homepage": "https://github.com/plasticneuron/week4-DFJL-colours#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
+}
