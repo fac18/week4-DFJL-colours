@@ -35,10 +35,6 @@ searchButton.onclick = function linkToExternal(event) {
     `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`,
     "_blank"
   );
-  // searchButton.setAttribute(
-  //   "target",
-  //   `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`
-  // );
 };
 
 // update option dropdown element for colors
