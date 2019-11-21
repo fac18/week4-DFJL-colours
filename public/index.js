@@ -16,6 +16,6 @@ inputField.addEventListener("input", event => {
       console.log(`Error, status is: ${query.status}`);
     }
   };
-  query.open("GET", "/search", true);
+  query.open("GET", `/search?q=${inputText}`, true);
   query.send();
 });

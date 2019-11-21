@@ -3,13 +3,12 @@ const handlers = require("./handlers.js");
 const router = (request, response) => {
   const url = request.url;
   console.log(url);
-  console.log("elseif:", url.includes("public"));
   if (url === "/") {
     handlers.handlerHome(request, response);
-  } else if (url.indexOf("public") !== -1) {
+  } else if (url.includes("public")) {
     handlers.handlerPublic(request, response, url);
-  } else if (url == "/search") {
-    console.log('"/search" endpoint is being routed');
+  } else if (url.includes("search/")) {
+    console.log("querystring is:", url);
     // handler here
   } else {
     response.writeHead(404); //if anything else is typed show a 404 message
