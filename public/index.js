@@ -9,6 +9,9 @@ inputField.addEventListener("input", event => {
       let result = JSON.parse(query.responseText);
       console.log("API call response is:", result);
       updateResults(result);
+      if (Object.keys(result).includes(inputText)) {
+        document.body.style.backgroundColor = inputText;
+      }
     } else {
       console.log(`Error, status is: ${query.status}`);
     }
