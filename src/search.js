@@ -5,22 +5,25 @@ function searchColors(inputQuery) {
   let chars = inputQuery.length;
   const colorKeys = Object.keys(colorNames);
 
-  if (chars < 3) {
-    colorKeys.forEach(color => {
-      if (color.startsWith(inputQuery)) {
+  // first add colors *starting* with search query
+  colorKeys.forEach(color => {
+    if (color.startsWith(inputQuery)) {
+      searchResults.push(color);
+    }
+  });
+
+  // then add any colors *including* search query, not allowing for duplicates
+  colorKeys.forEach(color => {
+    if (color.includes(inputQuery)) {
+      if (!searchResults.includes(color)) {
         searchResults.push(color);
       }
-    });
-  } else {
-    colorKeys.forEach(color => {
-      if (color.includes(inputQuery)) {
-        searchResults.push(color);
-      }
-    });
-  }
+    }
+  });
 
   // limit size of returned array to length 10
   let shortResults = searchResults.slice(0, 10);
+
   // produce object to return w/ appropriate keys & value
   let finalObject = {};
   shortResults.forEach(x => {
