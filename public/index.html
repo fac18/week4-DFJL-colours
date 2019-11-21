@@ -5,13 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Colours</title>
+  <title>Colors</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="public/style.css" />
 </head>
 
 <body>
-  <input type="text" placeholder="Type in a colour" name="search" />
+  <label for="search">Choose a color:</label>
+  <input list="suggestions" type="text" placeholder="E.g azure" name="search" id="search" />
+  <datalist id="suggestions">
+    <option>aliceblue</option>
+    <option>antiquewhite</option>
+    <option>aqua</option>
+    <option>aquamarine</option>
+    <option>azure</option>
+  </datalist>
   <button type="submit"><i class="fa fa-search"></i></button>
 
   <script src="public/index.js"></script>
