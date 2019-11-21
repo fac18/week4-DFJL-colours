@@ -1,5 +1,3 @@
-console.log("halloooo");
-
 const inputField = document.querySelector(".search-form__input");
 
 // write API in event listener
@@ -10,8 +8,7 @@ inputField.addEventListener("input", event => {
     if (query.status === 200) {
       let result = JSON.parse(query.responseText);
       console.log("API call response is:", result);
-      // DOM population function goes here
-      console.log("The DOM will now be populated with returned information");
+      updateResults(result);
     } else {
       console.log(`Error, status is: ${query.status}`);
     }
