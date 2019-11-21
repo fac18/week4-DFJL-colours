@@ -1,7 +1,7 @@
 const colorNames = require("./color-names.json");
 
 function searchColors(inputQuery) {
-  let searchResults = [];
+  searchResults = [];
   let chars = inputQuery.length;
   const colorKeys = Object.keys(colorNames);
 
@@ -19,7 +19,7 @@ function searchColors(inputQuery) {
     });
   }
 
-  // limit size of returned array (to length 10)
+  // limit size of returned array to length 10
   let shortResults = searchResults.slice(0, 10);
   // produce object to return w/ appropriate keys & value
   let finalObject = {};

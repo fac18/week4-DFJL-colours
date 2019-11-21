@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Colours</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="public/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CSS Colours</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="public/style.css" />
+</head>
 
-  <body>
-    <form action="" class="search-form">
-      <input
-        type="text"
-        placeholder="Type in a colour"
-        name="search-input"
-        class="search-form__input"
-      />
-      <button type="submit" class="search-form__button">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-    <script src="public/index.js"></script>
-  </body>
+<body>
+  <form action="" class="search-form">
+  <label for="search">Choose a colour:</label>
+  <input id="inputBox" list="suggestions" type="text" name="search" class="search-form__input" id="search" placeholder="Eg. azure" value="" />
+  <datalist id="suggestions">
+    <!-- default options on start up  -->
+    <option class="color" value='aliceblue'></option>
+    <option class="color" value='antiquewhite'></option>
+    <option class="color" value='aqua'></option>
+    <option class="color" value='aquamarine'></option>
+    <option class="color" value='azure'></option>
+  </datalist>
+  <button id='searchButton' type="submit" class="search-form__search"><i class="fa fa-search"></i></button>
+  <button id='clearButton' type="clear" class="search-form__clear"><i class="fa fa-remove"></i></button>
+  </form>
+  <script src="public/index.js"></script>
+  <script src="public/dom.js"></script>
+</body>
+
 </html>
