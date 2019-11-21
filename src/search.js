@@ -20,8 +20,13 @@ function searchColors(inputQuery) {
   }
 
   // limit size of returned array (to length 10)
-  return searchResults.slice(0, 10);
-  //return as object
+  let shortResults = searchResults.slice(0, 10);
+  // produce object to return w/ appropriate keys & value
+  let finalObject = {};
+  shortResults.forEach(x => {
+    finalObject[x] = colorNames[x];
+  });
+  return finalObject;
 }
 
 module.exports = searchColors;
