@@ -14,6 +14,7 @@ clearButton.onclick = function clearResults(event) {
   ];
 
   inputBox.value = "";
+  document.body.style.backgroundColor = "";
 
   while (datalist.firstChild) {
     datalist.removeChild(datalist.firstChild);
