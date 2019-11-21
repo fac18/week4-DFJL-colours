@@ -1,7 +1,8 @@
 const colorNames = require('./color-names.json');
+let searchResults = [];
 
 function searchColors(inputQuery) {
-  let searchResults = [];
+  searchResults = [];
   let chars = inputQuery.length;
   const colorKeys = Object.keys(colorNames);
 
@@ -20,7 +21,12 @@ function searchColors(inputQuery) {
   }
 
   // limit size of returned array (to length 10)
-  return searchResults.slice(0, 10);
+  searchResults = searchResults.slice(0, 10);
+  return searchResults;
 }
+
+searchColors('blu');
+console.log(searchColors('blu'));
+console.log(searchResults);
 
 module.exports = searchColors;
