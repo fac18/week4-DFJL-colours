@@ -1,8 +1,7 @@
-const inputBox = document.querySelector("#inputBox");
-const inputText = document.querySelector("#inputBox").value;
+const inputBox = document.querySelector("#search");
 const datalist = document.querySelector("#suggestions");
-const searchButton = document.querySelector("#searchButton");
 const clearButton = document.getElementById("clearButton");
+const searchButton = document.querySelector("#searchButton");
 
 clearButton.onclick = function clearResults(event) {
   event.preventDefault();
@@ -27,11 +26,19 @@ clearButton.onclick = function clearResults(event) {
     datalist.appendChild(colorOption);
   });
 };
-console.log(inputBox.value);
+console.log(search.value);
 
-searchButton.onclick = hexColor => {
-  let hexColor = Object.values(inputText);
-  searchButton.href = `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`;
+searchButton.onclick = function linkToExternal(event) {
+  event.preventDefault();
+  let hexColor = result[inputBox.value].slice(1);
+  window.open(
+    `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`,
+    "_blank"
+  );
+  // searchButton.setAttribute(
+  //   "target",
+  //   `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`
+  // );
 };
 
 // update option dropdown element for colors
