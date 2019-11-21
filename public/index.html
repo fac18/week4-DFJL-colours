@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,21 +12,22 @@
 
 <body>
   <form action="" class="search-form">
-  <label for="search">Choose a colour:</label>
-  <input id="inputBox" list="suggestions" type="text" name="search" class="search-form__input" id="search" placeholder="Eg. azure" value="" />
-  <datalist id="suggestions">
-    <!-- default options on start up  -->
-    <option class="color" value='aliceblue'></option>
-    <option class="color" value='antiquewhite'></option>
-    <option class="color" value='aqua'></option>
-    <option class="color" value='aquamarine'></option>
-    <option class="color" value='azure'></option>
-  </datalist>
-  <button id='searchButton' type="submit" class="search-form__search"><i class="fa fa-search"></i></button>
-  <button id='clearButton' type="clear" class="search-form__clear"><i class="fa fa-remove"></i></button>
+    <label for="search">Choose a colour:</label>
+    <input id="inputBox" list="suggestions" type="text" name="search" class="search-form__input" id="search"
+      placeholder="Eg. azure" value="" />
+    <datalist id="suggestions">
+      <!-- default options on start up  -->
+      <option class="color" value='aliceblue'></option>
+      <option class="color" value='antiquewhite'></option>
+      <option class="color" value='aqua'></option>
+      <option class="color" value='aquamarine'></option>
+      <option class="color" value='azure'></option>
+    </datalist>
+    <button id='searchButton' type="submit" class="search-form__search"><i class="fa fa-search"></i></button>
+    <button id='clearButton' type="clear" class="search-form__clear"><i class="fa fa-remove"></i></button>
   </form>
-  <script src="public/index.js"></script>
   <script src="public/dom.js"></script>
+  <script src="public/index.js"></script>
 </body>
 
 </html>
