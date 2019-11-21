@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Colours</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crafty+Girls|Over+the+Rainbow|Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>CSS Colours</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="public/style.css" />
-</head>
+  <body>
+    <main>
+      <h1>Colour Machine</h1>
 
-<body>
-  <form action="" class="search-form">
-    <label for="search">Choose a colour:</label>
-    <input id="inputBox" list="suggestions" type="text" name="search" class="search-form__input" id="search"
-      placeholder="Eg. azure" value="" />
-    <datalist id="suggestions">
-      <!-- default options on start up  -->
-      <option class="color" value='aliceblue'></option>
-      <option class="color" value='antiquewhite'></option>
-      <option class="color" value='aqua'></option>
-      <option class="color" value='aquamarine'></option>
-      <option class="color" value='azure'></option>
-    </datalist>
-    <button id='searchButton' type="submit" class="search-form__search"><i class="fa fa-search"></i></button>
-    <button id='clearButton' type="clear" class="search-form__clear"><i class="fa fa-remove"></i></button>
-  </form>
-  <script src="public/dom.js"></script>
-  <script src="public/index.js"></script>
-</body>
+      <form action="" class="search-form">
+        <input
+          id="inputBox"
+          list="suggestions"
+          type="text"
+          name="search"
+          class="search-form__input"
+          id="search"
+          placeholder="Start typing a color"
+          value=""
+        />
+        <datalist id="suggestions">
+          <!-- default options on start up  -->
+          <option class="color" value="aliceblue"></option>
+          <option class="color" value="antiquewhite"></option>
+          <option class="color" value="aqua"></option>
+          <option class="color" value="aquamarine"></option>
+          <option class="color" value="azure"></option>
+        </datalist>
 
+        <section class="buttons">
+          <button id="searchButton" type="submit" class="search-form__search">
+            <i class="fa fa-search"></i>
+          </button>
+          <button id="clearButton" type="clear" class="search-form__clear">
+            <i class="fa fa-remove"></i>
+          </button>
+        </section>
+      </form>
+    </main>
+    <script src="public/dom.js"></script>
+    <script src="public/index.js"></script>
+  </body>
 </html>
