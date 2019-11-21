@@ -17,39 +17,37 @@
   </head>
 
   <body>
-    <main>
-      <h1>Colour Machine</h1>
-
-      <form action="" class="search-form">
-        <input
-          id="inputBox"
-          list="suggestions"
-          type="text"
-          name="search"
-          class="search-form__input"
-          id="search"
-          placeholder="Start typing a color"
-          value=""
-        />
-        <datalist id="suggestions">
-          <!-- default options on start up  -->
-          <option class="color" value="aliceblue"></option>
-          <option class="color" value="antiquewhite"></option>
-          <option class="color" value="aqua"></option>
-          <option class="color" value="aquamarine"></option>
-          <option class="color" value="azure"></option>
-        </datalist>
-
-        <section class="buttons">
-          <button id="searchButton" type="submit" class="search-form__search">
-            <i class="fa fa-search"></i>
-          </button>
-          <button id="clearButton" type="clear" class="search-form__clear">
-            <i class="fa fa-remove"></i>
-          </button>
-        </section>
-      </form>
-    </main>
+    <form action="" class="search-form">
+      <label for="search">Choose a colour:</label>
+      <input
+        id="search"
+        list="suggestions"
+        type="text"
+        name="search"
+        class="search-form__input"
+        placeholder="Eg. azure"
+        value=""
+      />
+      <datalist id="suggestions">
+        <!-- default options on start up  -->
+        <option class="color" value="aliceblue"></option>
+        <option class="color" value="antiquewhite"></option>
+        <option class="color" value="aqua"></option>
+        <option class="color" value="aquamarine"></option>
+        <option class="color" value="azure"></option>
+      </datalist>
+      <button
+        id="searchButton"
+        type="submit"
+        class="search-form__search"
+        onclick="searchButton()"
+      >
+        <i class="fa fa-search"></i>
+      </button>
+      <button id="clearButton" type="clear" class="search-form__clear">
+        <i class="fa fa-remove"></i>
+      </button>
+    </form>
     <script src="public/dom.js"></script>
     <script src="public/index.js"></script>
   </body>

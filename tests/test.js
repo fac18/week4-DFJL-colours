@@ -7,16 +7,16 @@ test("Tape is working", function(t) {
 });
 
 test("Find matching names from color-names.json file", function(t) {
-  let actual = Object.keys(search("aq"));
-  let expected = ["aqua", "aquamarine"];
-  t.deepEquals(actual, expected, 'Searching "aq" should return 2 results');
+  let actual = Object.keys(search("que"));
+  let expected = ["antiquewhite", "bisque"];
+  t.deepEquals(actual, expected, 'Searching "que" should return 2 results');
   t.end();
 });
 
 test("Find matching names, including searching words internally", function(t) {
-  let actual = Object.keys(search("que"));
-  let expected = ["antiquewhite", "bisque"];
-  t.deepEquals(actual, expected, 'Searching "que" should return 2 results');
+  let actual = Object.keys(search("aq"));
+  let expected = ["aqua", "aquamarine", "mediumaquamarine"];
+  t.deepEquals(actual, expected, 'Searching "aq" should return 3 results');
   t.end();
 });
 
