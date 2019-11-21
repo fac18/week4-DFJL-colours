@@ -4,7 +4,6 @@ const searchColors = require("./search.js");
 
 const handlerHome = (request, response) => {
   const url = request.url;
-  console.log("handlerhome url:", url);
   const filePath = path.join(__dirname, "..", "public", "index.html");
 
   fs.readFile(filePath, (error, file) => {
@@ -26,8 +25,6 @@ const handlerPublic = (request, response, url) => {
     css: "text/css",
     js: "application/js"
   };
-
-  console.log("handlerpublic url:", url);
   const filePath = path.join(__dirname, "..", url);
   fs.readFile(filePath, (error, file) => {
     if (error) {
@@ -43,13 +40,13 @@ const handlerPublic = (request, response, url) => {
 
 const handlerSearch = (request, response, url) => {
   const inputText = url.split("=")[1];
-  console.log(searchColors);
 
   response.writeHead(200, { "Content-Type": "application/json" });
-  reponse.end(searchColors(inputText));
+  response.end(JSON.stringify(searchColors(inputText)));
 };
 
 module.exports = {
   handlerHome,
-  handlerPublic
+  handlerPublic,
+  handlerSearch
 };
