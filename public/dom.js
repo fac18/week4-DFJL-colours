@@ -3,7 +3,7 @@ const datalist = document.querySelector("#suggestions");
 const clearButton = document.getElementById("clearButton");
 const searchButton = document.querySelector("#searchButton");
 
-clearButton.onclick = function clearResults(event) {
+clearButton.addEventListener("click", event => {
   event.preventDefault();
   let defaultArray = [
     "aliceblue",
@@ -26,20 +26,20 @@ clearButton.onclick = function clearResults(event) {
     colorOption.value = x;
     datalist.appendChild(colorOption);
   });
-};
+});
 console.log(search.value);
 
-searchButton.onclick = function linkToExternal(event) {
+searchButton.addEventListener("click", event => {
   event.preventDefault();
   let hexColor = result[inputBox.value].slice(1);
   window.open(
     `https://coolors.co/ffffff-808080-${hexColor}-808080-ffffff`,
     "_blank"
   );
-};
+});
 
 // update option dropdown element for colors
-function updateResults(result) {
+const updateResults = result => {
   // clear all current dropdown options
   while (datalist.firstChild) {
     datalist.removeChild(datalist.firstChild);
@@ -53,4 +53,4 @@ function updateResults(result) {
     colorOption.value = x;
     datalist.appendChild(colorOption);
   });
-}
+};
