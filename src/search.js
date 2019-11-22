@@ -3,7 +3,6 @@ const colorNames = require("./color-names.json");
 // searchColors takes a string to use as search criterion
 function searchColors(inputQuery) {
   searchResults = [];
-  let chars = inputQuery.length;
   const colorKeys = Object.keys(colorNames);
 
   // first add colors *starting* with search query
