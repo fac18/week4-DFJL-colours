@@ -1,5 +1,6 @@
 const colorNames = require("./color-names.json");
 
+// searchColors takes a string to use as search criterion
 function searchColors(inputQuery) {
   searchResults = [];
   let chars = inputQuery.length;
