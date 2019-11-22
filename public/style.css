@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+:root {
+  --space-xxxxs: 0.45rem;
+  --space-xxxs: 0.73rem;
+  --space-xxs: 1.18rem;
+  --space-xs: 1.91rem;
+  --space-sm: 3.09rem;
+  --space-md: 5rem;
+  --space-lg: 8.09rem;
+  --space-xl: 13.09rem;
+  --space-xxl: 21.18rem;
+  --space-xxxl: 34.27rem;
+  --space-xxxxl: 55.4rem;
+}
+
+||||||| merged common ancestors
+=======
 @import url("https://fonts.googleapis.com/css?family=Crafty+Girls|Over+the+Rainbow|Permanent+Marker&display=swap");
 
+>>>>>>> master
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -12,22 +30,51 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Permanent Marker", cursive;
-  /*font-family: "Crafty Girls", cursive;*/
-  /*font-family: "Over the Rainbow", cursive;*/
 }
 
 main {
   position: absolute;
-  top: 30vh;
+  top: 20vh;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 5rem;
-  border-radius: 3rem;
+  padding: var(--space-xs);
+  border-radius: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: black solid;
+}
+
+form {
+  width: 15rem;
+  border: black solid;
 }
 
 h1 {
   text-align: center;
+  padding-bottom: var(--space-xs);
+  font-size: var(--space-xs);
 }
 
-.search-form {
-  display: flex;
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--space-md);
+    padding-bottom: var(--space-xxxs);
+  }
+  form {
+    width: 30rem;
+  }
+  main {
+    padding-bottom: var(--space-md);
+  }
+}
+
+input {
+  font-family: "Crafty Girls", cursive;
+}
+
+#searchButton {
+}
+
+#clearButton {
 }
