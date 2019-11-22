@@ -1,11 +1,6 @@
 const search = require("../src/search.js");
 const test = require("tape");
 
-test("Tape is working", t => {
-  t.equal(1, 1, "This test should always pass");
-  t.end();
-});
-
 test("The search.js/searchColors function does not mutate passed string (/is pure)", t => {
   let queryString = "yell";
   search(queryString);
