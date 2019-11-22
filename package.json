@@ -29,6 +29,7 @@
   "devDependencies": {
     "nodemon": "^1.19.4",
     "nyc": "^14.1.1",
+    "prettier": "^1.19.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
