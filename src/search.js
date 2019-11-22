@@ -26,8 +26,8 @@ function searchColors(inputQuery) {
 
   // produce object to return w/ appropriate keys & value
   let finalObject = {};
-  shortResults.forEach(x => {
-    finalObject[x] = colorNames[x];
+  shortResults.forEach(color => {
+    finalObject[color] = colorNames[color];
   });
   return finalObject;
 }
