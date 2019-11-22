@@ -10,7 +10,7 @@ const handlerHome = (request, response) => {
     if (error) {
       console.log(error);
       response.writeHead(500, { "Content-Type": "text/html" });
-      respone.end("<h1>Sorry we had a problem on our end</h1>");
+      response.end("<h1>Sorry we had a problem on our end</h1>");
     } else {
       response.writeHead(200, { "Content-Type": "text/html" });
       response.end(file);

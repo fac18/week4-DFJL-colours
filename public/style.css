@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --space-xxxxs: 0.45rem;
   --space-xxxs: 0.73rem;
@@ -12,6 +13,11 @@
   --space-xxxxl: 55.4rem;
 }
 
+||||||| merged common ancestors
+=======
+@import url("https://fonts.googleapis.com/css?family=Crafty+Girls|Over+the+Rainbow|Permanent+Marker&display=swap");
+
+>>>>>>> master
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
