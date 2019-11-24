@@ -10,45 +10,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crafty+Girls|Over+the+Rainbow|Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <form action="" class="search-form">
-      <label for="search">Choose a colour:</label>
-      <input
-        id="search"
-        list="suggestions"
-        type="text"
-        name="search"
-        class="search-form__input"
-        placeholder="Eg. azure"
-        value=""
-      />
-      <datalist id="suggestions">
-        <!-- default options on start up  -->
-        <option class="color" value="aliceblue"></option>
-        <option class="color" value="antiquewhite"></option>
-        <option class="color" value="aqua"></option>
-        <option class="color" value="aquamarine"></option>
-        <option class="color" value="azure"></option>
-      </datalist>
-      <button
-        id="searchButton"
-        type="submit"
-        class="search-form__search"
-        aria-label="search complimentary colours"
-      >
-        <i class="fa fa-search">Click here to search complimentary colours</i>
-      </button>
-      <button
-        id="clearButton"
-        type="clear"
-        class="search-form__clear"
-        aria-label="clear input box"
-      >
-        <i class="fa fa-remove"></i>
-      </button>
-    </form>
+    <main>
+      <h1>Color Machine</h1>
+      <form action="" class="search-form">
+        <input
+          id="search"
+          list="suggestions"
+          type="text"
+          name="search"
+          class="search-form__input"
+          placeholder="Choose a Colour!"
+          value=""
+        />
+        <datalist id="suggestions">
+          <!-- default options on start up  -->
+          <option class="color" value="aliceblue"></option>
+          <option class="color" value="antiquewhite"></option>
+          <option class="color" value="aqua"></option>
+          <option class="color" value="aquamarine"></option>
+          <option class="color" value="azure"></option>
+        </datalist>
+
+        <button
+          id="searchButton"
+          type="submit"
+          class="search-form__search"
+          aria-label="Discover complimentary colours"
+        >
+          <i>Discover complimentary colours</i>
+        </button>
+        <button
+          id="clearButton"
+          type="clear"
+          class="search-form__clear"
+          aria-label="clear input box"
+        >
+          <i class="fa fa-remove"></i>
+        </button>
+      </form>
+    </main>
     <script src="public/dom.js"></script>
     <script src="public/index.js"></script>
   </body>
